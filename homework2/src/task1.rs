@@ -17,16 +17,16 @@
  }
  
  fn find_term(search_term: &str, quote: &str) -> String {
-     let mut counter = 0;
-     let output: String = String::from("Zero results");
-     for line in quote.lines() {
-         counter += 1;
-         if line.contains(search_term){
-             return format!("{}: {}", counter, line);
-         }
-     };
- 
-     output
+    let mut couter = 0;
+    let mut answer = String::new();
+    for line in quote.lines() {
+        couter += 1;
+
+        if line.contains(search_term) {
+             answer = format!("{}:{}", couter, line);
+        }
+    }
+    answer
  }
 
  
